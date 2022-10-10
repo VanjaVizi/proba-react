@@ -32,7 +32,7 @@ function LoginPage({addToken}) {
         //"http://127.0.0.1:8000/api/login" je ruta na kojoj se ovo nalazi u laravelu
         
         axios
-            .post("http://127.0.0.1:8000/api/login", userData )
+            .post("/api/login", userData )
             .then((res)=>{ //ako se uspesno izvrsi logovanje uci ce u funkciju (zbog ovog then)
                 console.log(res.data[0]);
                 if(res.data.success===true){ 
